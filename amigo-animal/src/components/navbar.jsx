@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="bg-primary-500 p-2 rounded-lg">
+            <div className="bg-violet-900 p-2 rounded-lg">
               <Heart className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-800">
@@ -16,7 +16,7 @@ const Navbar = () => {
           </div>
 
           {/* Login Button */}
-          <button className="flex items-center space-x-2 bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg">
+          <button className="flex items-center space-x-2 bg-violet-900 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
             <User className="h-4 w-4" />
             <span className="font-medium">Iniciar Sesión</span>
           </button>
