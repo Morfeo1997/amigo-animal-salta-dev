@@ -1,0 +1,101 @@
+import { X, User, Lock } from 'lucide-react';
+
+const LoginModal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica de autenticación
+    console.log('Login submitted');
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-md relative animate-in fade-in duration-200">
+        {/* Botón cerrar */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+        >
+          <X className="h-6 w-6" />
+        </button>
+
+        {/* Contenido del modal */}
+        <div className="p-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">Iniciar Sesión</h2>
+            <p className="text-gray-600">Accede a tu cuenta de AdoptaMe</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Campo Nombre de Usuario */}
+            <div>
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                Nombre de Usuario
+              </label>
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+                  placeholder="Ingresa tu usuario"
+                />
+              </div>
+            </div>
+
+            {/* Campo Contraseña */}
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                Contraseña
+              </label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+                  placeholder="Ingresa tu contraseña"
+                />
+              </div>
+            </div>
+
+            {/* Enlace Olvidaste tu contraseña */}
+            <div className="text-right">
+              <a
+                href="#"
+                className="text-sm text-primary-500 hover:text-primary-600 transition-colors duration-200"
+              >
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+
+            {/* Botón de envío */}
+            <button
+              type="submit"
+              className="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Iniciar Sesión
+            </button>
+          </form>
+
+          {/* Enlace para registro */}
+          <div className="text-center mt-6 pt-6 border-t border-gray-200">
+            <p className="text-gray-600">
+              ¿No tienes cuenta?{' '}
+              <a href="#" className="text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
+                Regístrate aquí
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoginModal;
