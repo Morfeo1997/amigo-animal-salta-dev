@@ -115,7 +115,7 @@ const RegisterForm = () => {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 ${
+              className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200 ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="tu@email.com"
@@ -139,7 +139,7 @@ const RegisterForm = () => {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 ${
+              className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200 ${
                 errors.password ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Mínimo 6 caracteres"
@@ -169,7 +169,7 @@ const RegisterForm = () => {
               name="wantsToAdoptOrPublish"
               checked={formData.wantsToAdoptOrPublish}
               onChange={handleInputChange}
-              className="mt-1 text-primary-500 focus:ring-primary-500"
+              className="mt-1 text-violet-500 focus:ring-violet-500"
             />
             <div>
               <span className="text-sm font-medium text-gray-700">
@@ -196,7 +196,7 @@ const RegisterForm = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 ${
+                className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200 ${
                   errors.phone ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="+52 55 1234 5678"
@@ -214,7 +214,7 @@ const RegisterForm = () => {
         {/* Botón de envío */}
         <button
           type="submit"
-          className="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          className="w-full bg-violet-500 hover:bg-violet-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
         >
           Crear Cuenta
         </button>
@@ -224,7 +224,7 @@ const RegisterForm = () => {
       <div className="text-center mt-6 pt-6 border-t border-gray-200">
         <p className="text-gray-600">
           ¿Ya tienes cuenta?{' '}
-          <a href="#" className="text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200">
+          <a href="#" className="text-violet-500 hover:text-violet-600 font-medium transition-colors duration-200">
             Inicia sesión aquí
           </a>
         </p>

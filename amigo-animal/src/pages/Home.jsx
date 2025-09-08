@@ -1,7 +1,7 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import CardContainer from '../components/CardContainer';
-import AdoptionCard from '../components/AdoptionCard';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import CardContainer from '../components/Home-components/CardContainer';
+import AdoptionCard from '../components/Home-components/AdoptionCard';
 
 const Home = () => {
   // Datos de ejemplo para las mascotas

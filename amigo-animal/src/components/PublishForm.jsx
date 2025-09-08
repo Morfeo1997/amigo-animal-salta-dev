@@ -97,8 +97,8 @@ const PublishForm = () => {
           <div
             className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors duration-200 ${
               dragActive 
-                ? 'border-primary-500 bg-primary-50' 
-                : 'border-gray-300 hover:border-primary-400'
+                ? 'border-violet-500 bg-violet-50' 
+                : 'border-gray-300 hover:border-violet-400'
             }`}
             onDragEnter={handleDrag}
             onDragLeave={handleDrag}
@@ -118,7 +118,7 @@ const PublishForm = () => {
             />
             <label
               htmlFor="photo-upload"
-              className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200"
+              className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200"
             >
               Seleccionar fotos
             </label>
@@ -160,7 +160,7 @@ const PublishForm = () => {
                 value="perdido"
                 checked={formData.type === 'perdido'}
                 onChange={handleInputChange}
-                className="mr-3 text-primary-500"
+                className="mr-3 text-violet-500"
               />
               <span className="font-medium">Perdido</span>
             </label>
@@ -171,7 +171,7 @@ const PublishForm = () => {
                 value="encontrado"
                 checked={formData.type === 'encontrado'}
                 onChange={handleInputChange}
-                className="mr-3 text-primary-500"
+                className="mr-3 text-violet-500"
               />
               <span className="font-medium">Encontrado</span>
             </label>
@@ -188,7 +188,7 @@ const PublishForm = () => {
             value={formData.species}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200"
           >
             <option value="">Selecciona una especie</option>
             <option value="perro">Perro</option>
@@ -210,7 +210,7 @@ const PublishForm = () => {
             required
             rows={4}
             placeholder="Describe las características de la mascota (color, tamaño, comportamiento, etc.)"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 resize-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200 resize-none"
           />
         </div>
 
@@ -228,7 +228,7 @@ const PublishForm = () => {
             onChange={handleInputChange}
             required
             placeholder="Ej: Colonia Roma Norte, Parque México"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200"
           />
           <p className="text-xs text-gray-500 mt-1">
             Por seguridad, no incluyas tu dirección exacta
@@ -248,7 +248,7 @@ const PublishForm = () => {
             value={formData.date}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200"
           />
         </div>
 
@@ -266,7 +266,7 @@ const PublishForm = () => {
                   value="email"
                   checked={formData.contactType === 'email'}
                   onChange={handleInputChange}
-                  className="mr-2 text-primary-500"
+                  className="mr-2 text-violet-500"
                 />
                 <Mail className="h-4 w-4 mr-1" />
                 Email
@@ -295,7 +295,7 @@ const PublishForm = () => {
                   ? 'tu@email.com' 
                   : '+52 55 1234 5678'
               }
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors duration-200"
             />
           </div>
         </div>
@@ -309,9 +309,9 @@ const PublishForm = () => {
               checked={formData.captcha}
               onChange={handleInputChange}
               required
-              className="text-primary-500"
+              className="text-violet-500"
             />
-            <Shield className="h-5 w-5 text-primary-500" />
+            <Shield className="h-5 w-5 text-violet-500" />
             <span className="text-sm">
               ✔️ Confirmo que no soy un robot y que la información es verídica
             </span>
@@ -321,7 +321,7 @@ const PublishForm = () => {
         {/* Botón de envío */}
         <button
           type="submit"
-          className="w-full bg-primary-500 hover:bg-primary-600 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          className="w-full bg-violet-500 hover:bg-violet-600 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
         >
           Publicar
         </button>
